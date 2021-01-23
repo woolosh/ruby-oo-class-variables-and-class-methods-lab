@@ -13,6 +13,10 @@ class Song
         @@genres << self
     end
 
+    def self.name
+        @name
+    end
+
     def self.genres
         self.count.select {|song| song.genre}
     end
@@ -22,7 +26,7 @@ class Song
     end
 
     def self.genres
-        @@genres
+        @@genres.hash
     end
 
     def self.artist_count
